@@ -48,6 +48,10 @@ const addNewContact = (e) => {
   });
   // hide the form
   newContactForm.classList.remove("is-visible");
+
+  firstName.value = "";
+  lastName.value = "";
+  phoneNumber.value = "";
 };
 
 newContactForm.addEventListener("submit", addNewContact);
