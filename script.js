@@ -6,7 +6,6 @@ const list = [
 ];
 
 const phoneList = document.querySelector("#phone-list");
-console.log(phoneList);
 
 const displayListElement = (item) => {
   let node = document.createElement("LI"); //First create an LI node,
@@ -24,3 +23,11 @@ list.push(adi);
 list.map((item) => {
   displayListElement(item);
 });
+
+const addNewContact = () => {
+  console.log("test");
+};
+
+const newContactForm = document.querySelector(".new-contact-form");
+
+newContactForm.addEventListener("submit", addNewContact);
