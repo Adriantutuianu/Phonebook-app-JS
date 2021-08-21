@@ -27,8 +27,19 @@ const addNewContact = (e) => {
     surname: lastName.value,
     phone: phoneNumber.value,
   };
-  console.log(newContact);
-  list.push(newContact);
+
+  // delete all displayed elements
+  while (phoneList.firstChild) {
+    phoneList.removeChild(phoneList.firstChild);
+  }
+
+  // generate a new list
+  const newList = [...list, newContact];
+
+  // re display new list
+  newList.map((item) => {
+    displayListElement(item);
+  });
   console.log(list);
 };
 const newContactForm = document.querySelector(".new-contact-form");
