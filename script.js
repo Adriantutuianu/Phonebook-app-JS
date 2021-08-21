@@ -1,4 +1,4 @@
-const list = [
+let list = [
   { name: "Adrian", surname: "Tut", phone: "0766566398" },
   { name: "John", surname: "Doe", phone: "07645557766" },
   { name: "Mickey", surname: "Smith", phone: "0763554358" },
@@ -16,6 +16,13 @@ const displayListElement = (item) => {
   phoneList.appendChild(node); //Finally append the LI node to the list.
 };
 
+const clearDisplayedList = () => {
+  // delete all displayed elements
+  while (phoneList.firstChild) {
+    phoneList.removeChild(phoneList.firstChild);
+  }
+};
+
 const addNewContact = (e) => {
   e.preventDefault();
   let firstName = document.querySelector("#fname");
@@ -28,10 +35,7 @@ const addNewContact = (e) => {
     phone: phoneNumber.value,
   };
 
-  // delete all displayed elements
-  while (phoneList.firstChild) {
-    phoneList.removeChild(phoneList.firstChild);
-  }
+  clearDisplayedList();
 
   // generate a new list
   const newList = [...list, newContact];
@@ -40,7 +44,6 @@ const addNewContact = (e) => {
   newList.map((item) => {
     displayListElement(item);
   });
-  console.log(list);
 };
 const newContactForm = document.querySelector(".new-contact-form");
 
