@@ -8,9 +8,13 @@ const list = [
 const phoneList = document.querySelector("#phone-list");
 console.log(phoneList);
 
-list.map((item) => {
+const displayListElement = (item) => {
   let node = document.createElement("LI"); //First create an LI node,
   let textnode = document.createTextNode(item.name); //then create a Text node,
   node.appendChild(textnode); //then append the Text node to the LI node.
   phoneList.appendChild(node); //Finally append the LI node to the list.
+};
+
+list.map((item) => {
+  displayListElement(item);
 });
