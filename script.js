@@ -15,19 +15,21 @@ const displayListElement = (item) => {
   node.appendChild(textnode); //then append the Text node to the LI node.
   phoneList.appendChild(node); //Finally append the LI node to the list.
 };
-let adi = { name: "Maria", surname: "Tut", phone: " 07927753503" };
-
-list.push(adi);
 
 // Loop through array list
 list.map((item) => {
   displayListElement(item);
 });
 
-const addNewContact = () => {
-  console.log("test");
+const addNewContact = (e) => {
+  e.preventDefault();
+  let firstName = document.querySelector("#fname");
+  let lastName = document.querySelector("#lname");
+  let phoneNumber = document.querySelector("#phone");
+  console.log(firstName.value);
+  console.log(lastName.value);
+  console.log(phoneNumber.value);
 };
-
 const newContactForm = document.querySelector(".new-contact-form");
 
 newContactForm.addEventListener("submit", addNewContact);
