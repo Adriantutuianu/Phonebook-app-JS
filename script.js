@@ -6,3 +6,7 @@ const list = [
 
 const phoneList = document.querySelector("#phone-list");
 console.log(phoneList);
+
+list.map((item) =>
+  console.log(`${item.name} ${item.surname} with phone ${item.phone}`)
+);
