@@ -23,6 +23,8 @@ const clearDisplayedList = () => {
   }
 };
 
+const newContactForm = document.querySelector(".new-contact-form");
+
 const addNewContact = (e) => {
   e.preventDefault();
   let firstName = document.querySelector("#fname");
@@ -44,8 +46,9 @@ const addNewContact = (e) => {
   newList.map((item) => {
     displayListElement(item);
   });
+  // hide the form
+  newContactForm.classList.remove("is-visible");
 };
-const newContactForm = document.querySelector(".new-contact-form");
 
 newContactForm.addEventListener("submit", addNewContact);
 
