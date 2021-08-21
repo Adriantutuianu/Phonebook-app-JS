@@ -55,8 +55,9 @@ list.map((item) => {
 });
 
 const newContactBtn = document.querySelector(".btn-new-contact");
+
 const enableNewContactForm = () => {
-  console.log("clicked");
+  newContactForm.classList.add("is-visible");
 };
 
 newContactBtn.addEventListener("click", enableNewContactForm);
