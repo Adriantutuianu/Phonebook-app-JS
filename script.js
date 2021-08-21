@@ -10,7 +10,9 @@ console.log(phoneList);
 
 const displayListElement = (item) => {
   let node = document.createElement("LI"); //First create an LI node,
-  let textnode = document.createTextNode(item.name); //then create a Text node,
+  let textnode = document.createTextNode(
+    `${item.name} ${item.surname} - ${item.phone}`
+  ); //then create a Text node,
   node.appendChild(textnode); //then append the Text node to the LI node.
   phoneList.appendChild(node); //Finally append the LI node to the list.
 };
