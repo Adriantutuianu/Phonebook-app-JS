@@ -17,6 +17,7 @@ const displayListElement = (item) => {
   phoneList.appendChild(node); //Finally append the LI node to the list.
 };
 
+// Loop through array list
 list.map((item) => {
   displayListElement(item);
 });
