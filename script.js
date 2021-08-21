@@ -16,20 +16,24 @@ const displayListElement = (item) => {
   phoneList.appendChild(node); //Finally append the LI node to the list.
 };
 
-// Loop through array list
-list.map((item) => {
-  displayListElement(item);
-});
-
 const addNewContact = (e) => {
   e.preventDefault();
   let firstName = document.querySelector("#fname");
   let lastName = document.querySelector("#lname");
   let phoneNumber = document.querySelector("#phone");
-  console.log(firstName.value);
-  console.log(lastName.value);
-  console.log(phoneNumber.value);
+
+  const newContact = {
+    name: firstName.value,
+    surname: lastName.value,
+    phone: phoneNumber,
+  };
+  console.log(newContact);
 };
 const newContactForm = document.querySelector(".new-contact-form");
 
 newContactForm.addEventListener("submit", addNewContact);
+
+// Loop through array list
+list.map((item) => {
+  displayListElement(item);
+});
