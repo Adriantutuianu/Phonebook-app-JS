@@ -29,3 +29,12 @@ body {
 .content #phone-list li {
   list-style-type: none;
 }
+
+.content .new-contact-form {
+  display: flex;
+  align-items: center;
+  input {
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+}
