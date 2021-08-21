@@ -33,6 +33,10 @@ body {
 .content .new-contact-form {
   display: flex;
   align-items: center;
+  opacity: 0;
+  &.is-visible {
+    opacity: 1;
+  }
   input {
     margin-right: 15px;
     margin-left: 10px;

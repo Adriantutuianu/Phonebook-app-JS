@@ -53,3 +53,10 @@ newContactForm.addEventListener("submit", addNewContact);
 list.map((item) => {
   displayListElement(item);
 });
+
+const newContactBtn = document.querySelector(".btn-new-contact");
+const enableNewContactForm = () => {
+  console.log("clicked");
+};
+
+newContactBtn.addEventListener("click", enableNewContactForm);
