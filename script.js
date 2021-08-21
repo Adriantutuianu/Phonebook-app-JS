@@ -25,9 +25,11 @@ const addNewContact = (e) => {
   const newContact = {
     name: firstName.value,
     surname: lastName.value,
-    phone: phoneNumber,
+    phone: phoneNumber.value,
   };
   console.log(newContact);
+  list.push(newContact);
+  console.log(list);
 };
 const newContactForm = document.querySelector(".new-contact-form");
 
