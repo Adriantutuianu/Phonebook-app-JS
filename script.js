@@ -77,7 +77,16 @@ function app(contactList) {
   //search contact functionality
   const searchContact = (e) => {
     e.preventDefault();
-    console.log("Was clicked");
+
+    const inputValue = searchInput.value.toLowerCase();
+
+    const newList = contactList.filter(
+      (element) => element.surname.toLowerCase() === inputValue
+    );
+    // new list value
+    console.log(newList);
+
+    //display the new list
   };
 
   searchContactForm.addEventListener("submit", searchContact);
