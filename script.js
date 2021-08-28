@@ -83,8 +83,7 @@ function app(contactList) {
     const newList = contactList.filter(
       (element) => element.surname.toLowerCase() === inputValue
     );
-    // new list value
-    console.log(newList);
+
     clearDisplayedList();
     //display the new list
     app(newList);
