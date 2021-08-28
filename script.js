@@ -10,7 +10,6 @@ let list = [
   { id: 2, name: "Mickey", surname: "Smith", phone: "0763554358" },
   { id: 3, name: "George", surname: "Smith", phone: "0763554358" },
 ];
-
 function app(contactList) {
   const displayListElement = (item) => {
     // console.log(item);
@@ -29,12 +28,12 @@ function app(contactList) {
     }
   };
 
-  const addNewContact = (e) => {
+  const addNewContact = async (e) => {
     e.preventDefault();
 
-    const lastId = contactList[contactList.length - 1].id;
+    let lastId = await contactList[contactList.length - 1].id;
 
-    const newContact = {
+    let newContact = {
       id: lastId + 1,
       name: firstName.value,
       surname: lastName.value,
@@ -44,6 +43,7 @@ function app(contactList) {
     clearDisplayedList();
     // generate a new list
     let newList = [...contactList, newContact];
+    newContact = {};
     contactList = []; // fix to clear list
 
     // hide the form
