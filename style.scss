@@ -26,16 +26,20 @@ body {
   margin: 50px 0 15px 0;
 }
 
+.content #phone-list {
+  margin-top: 15px;
+}
+
 .content #phone-list li {
   list-style-type: none;
 }
 
 .content .new-contact-form {
-  display: flex;
+  display: none;
   align-items: center;
-  opacity: 0;
+  // opacity: 0;
   &.is-visible {
-    opacity: 1;
+    display: flex;
   }
   input {
     margin-right: 15px;

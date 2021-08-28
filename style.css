@@ -34,22 +34,25 @@ body {
   margin: 50px 0 15px 0;
 }
 
+.content #phone-list {
+  margin-top: 15px;
+}
+
 .content #phone-list li {
   list-style-type: none;
 }
 
 .content .new-contact-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0;
 }
 
 .content .new-contact-form.is-visible {
-  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .content .new-contact-form input {
