@@ -1,3 +1,9 @@
+const firstName = document.querySelector("#fname");
+const lastName = document.querySelector("#lname");
+const phoneNumber = document.querySelector("#phone");
+const newContactForm = document.querySelector(".new-contact-form");
+const phoneList = document.querySelector("#phone-list");
+
 let list = [
   { name: "Adrian", surname: "Tut", phone: "0766566398" },
   { name: "John", surname: "Doe", phone: "07645557766" },
@@ -6,8 +12,6 @@ let list = [
 ];
 
 function app(contactList) {
-  const phoneList = document.querySelector("#phone-list");
-
   const displayListElement = (item) => {
     let node = document.createElement("LI"); //First create an LI node,
     let textnode = document.createTextNode(
@@ -24,13 +28,8 @@ function app(contactList) {
     }
   };
 
-  const newContactForm = document.querySelector(".new-contact-form");
-
   const addNewContact = (e) => {
     e.preventDefault();
-    let firstName = document.querySelector("#fname");
-    let lastName = document.querySelector("#lname");
-    let phoneNumber = document.querySelector("#phone");
 
     const newContact = {
       name: firstName.value,
