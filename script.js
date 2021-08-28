@@ -5,10 +5,10 @@ const newContactForm = document.querySelector(".new-contact-form");
 const phoneList = document.querySelector("#phone-list");
 
 let list = [
-  { name: "Adrian", surname: "Tut", phone: "0766566398" },
-  { name: "John", surname: "Doe", phone: "07645557766" },
-  { name: "Mickey", surname: "Smith", phone: "0763554358" },
-  { name: "George", surname: "Smith", phone: "0763554358" },
+  { id: 0, name: "Adrian", surname: "Tut", phone: "0766566398" },
+  { id: 1, name: "John", surname: "Doe", phone: "07645557766" },
+  { id: 2, name: "Mickey", surname: "Smith", phone: "0763554358" },
+  { id: 3, name: "George", surname: "Smith", phone: "0763554358" },
 ];
 
 function app(contactList) {
@@ -31,7 +31,10 @@ function app(contactList) {
   const addNewContact = (e) => {
     e.preventDefault();
 
+    const lastId = contactList[contactList.length - 1].id;
+
     const newContact = {
+      id: lastId + 1,
       name: firstName.value,
       surname: lastName.value,
       phone: phoneNumber.value,
@@ -40,7 +43,7 @@ function app(contactList) {
     clearDisplayedList();
 
     // generate a new list
-    const newList = [...list, newContact];
+    const newList = [...contactList, newContact];
 
     // hide the form
     newContactForm.classList.remove("is-visible");
