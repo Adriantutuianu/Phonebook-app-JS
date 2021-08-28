@@ -13,6 +13,7 @@ let list = [
 
 function app(contactList) {
   const displayListElement = (item) => {
+    // console.log(item);
     let node = document.createElement("LI"); //First create an LI node,
     let textnode = document.createTextNode(
       `${item.name} ${item.surname} - ${item.phone}`
@@ -41,9 +42,9 @@ function app(contactList) {
     };
 
     clearDisplayedList();
-
     // generate a new list
-    const newList = [...contactList, newContact];
+    let newList = [...contactList, newContact];
+    contactList = []; // fix to clear list
 
     // hide the form
     newContactForm.classList.remove("is-visible");
