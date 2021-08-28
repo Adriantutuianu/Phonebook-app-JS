@@ -85,8 +85,9 @@ function app(contactList) {
     );
     // new list value
     console.log(newList);
-
+    clearDisplayedList();
     //display the new list
+    app(newList);
   };
 
   searchContactForm.addEventListener("submit", searchContact);
