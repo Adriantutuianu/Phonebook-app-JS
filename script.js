@@ -3,6 +3,8 @@ const lastName = document.querySelector("#lname");
 const phoneNumber = document.querySelector("#phone");
 const newContactForm = document.querySelector(".new-contact-form");
 const phoneList = document.querySelector("#phone-list");
+const searchContactForm = document.querySelector(".search-contact");
+const searchInput = document.querySelector("#search-input");
 
 let list = [
   { id: 0, name: "Adrian", surname: "Tut", phone: "0766566398" },
@@ -71,6 +73,14 @@ function app(contactList) {
   };
 
   newContactBtn.addEventListener("click", enableNewContactForm);
+
+  //search contact functionality
+  const searchContact = (e) => {
+    e.preventDefault();
+    console.log("Was clicked");
+  };
+
+  searchContactForm.addEventListener("submit", searchContact);
 }
 
 app(list);
